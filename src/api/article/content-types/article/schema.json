@@ -31,8 +31,8 @@
     },
     "cover": {
       "type": "media",
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -60,11 +60,21 @@
       "target": "api::comment.comment",
       "mappedBy": "article"
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::category.category",
-      "mappedBy": "article"
+      "inversedBy": "article"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "readingTime": {
+      "type": "integer",
+      "min": 2,
+      "default": 5
     }
   }
 }

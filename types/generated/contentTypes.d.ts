@@ -408,9 +408,14 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    categories: Attribute.Relation<
+    author: Attribute.Relation<
       'api::article.article',
-      'oneToMany',
+      'oneToOne',
+      'api::author.author'
+    >;
+    category: Attribute.Relation<
+      'api::article.article',
+      'oneToOne',
       'api::category.category'
     >;
     comment: Attribute.Relation<
@@ -425,7 +430,8 @@ export interface ApiArticleArticle extends Schema.CollectionType {
           preset: 'default';
         }
       >;
-    cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::article.article',
@@ -440,6 +446,14 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       }>;
     name: Attribute.String & Attribute.Required & Attribute.Unique;
     publishedAt: Attribute.DateTime;
+    readingTime: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          min: 2;
+        },
+        number
+      > &
+      Attribute.DefaultTo<5>;
     related_article: Attribute.Relation<
       'api::article.article',
       'oneToMany',
@@ -450,6 +464,38 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::article.article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiAuthorAuthor extends Schema.CollectionType {
+  collectionName: 'authors';
+  info: {
+    displayName: 'Author';
+    pluralName: 'authors';
+    singularName: 'author';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    avatar: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::author.author',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    email: Attribute.String;
+    name: Attribute.String;
+    publishedAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::author.author',
       'oneToOne',
       'admin::user'
     > &
@@ -475,7 +521,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     >;
     article: Attribute.Relation<
       'api::category.category',
-      'manyToOne',
+      'oneToOne',
       'api::article.article'
     >;
     cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
@@ -1063,6 +1109,7 @@ declare module '@strapi/types' {
       'admin::user': AdminUser;
       'api::app.app': ApiAppApp;
       'api::article.article': ApiArticleArticle;
+      'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::comment.comment': ApiCommentComment;
       'plugin::content-releases.release': PluginContentReleasesRelease;
