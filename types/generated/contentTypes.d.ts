@@ -366,7 +366,7 @@ export interface ApiAppApp extends Schema.CollectionType {
   collectionName: 'apps';
   info: {
     description: '';
-    displayName: 'app';
+    displayName: '\u1EE8ng d\u1EE5ng';
     pluralName: 'apps';
     singularName: 'app';
   };
@@ -400,7 +400,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   collectionName: 'articles';
   info: {
     description: '';
-    displayName: 'article';
+    displayName: 'B\u00E0i vi\u1EBFt';
     pluralName: 'articles';
     singularName: 'article';
   };
@@ -415,7 +415,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     >;
     category: Attribute.Relation<
       'api::article.article',
-      'oneToOne',
+      'manyToOne',
       'api::category.category'
     >;
     comment: Attribute.Relation<
@@ -475,7 +475,8 @@ export interface ApiArticleArticle extends Schema.CollectionType {
 export interface ApiAuthorAuthor extends Schema.CollectionType {
   collectionName: 'authors';
   info: {
-    displayName: 'Author';
+    description: '';
+    displayName: 'T\u00E1c gi\u1EA3';
     pluralName: 'authors';
     singularName: 'author';
   };
@@ -507,7 +508,8 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
 export interface ApiCategoryCategory extends Schema.CollectionType {
   collectionName: 'categories';
   info: {
-    displayName: 'category';
+    description: '';
+    displayName: 'Danh m\u1EE5c';
     pluralName: 'categories';
     singularName: 'category';
   };
@@ -520,9 +522,9 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'manyToOne',
       'api::app.app'
     >;
-    article: Attribute.Relation<
+    articles: Attribute.Relation<
       'api::category.category',
-      'oneToOne',
+      'oneToMany',
       'api::article.article'
     >;
     cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
@@ -550,7 +552,8 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
 export interface ApiCommentComment extends Schema.CollectionType {
   collectionName: 'comments';
   info: {
-    displayName: 'comment';
+    description: '';
+    displayName: 'B\u00ECnh lu\u1EADn';
     pluralName: 'comments';
     singularName: 'comment';
   };

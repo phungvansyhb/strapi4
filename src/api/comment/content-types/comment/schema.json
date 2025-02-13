@@ -4,7 +4,8 @@
   "info": {
     "singularName": "comment",
     "pluralName": "comments",
-    "displayName": "comment"
+    "displayName": "Bình luận",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

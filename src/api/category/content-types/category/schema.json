@@ -4,7 +4,8 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "category"
+    "displayName": "Danh mục",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,14 +27,15 @@
       ]
     },
     "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "app": {
       "type": "relation",
@@ -41,9 +43,9 @@
       "target": "api::app.app",
       "inversedBy": "categories"
     },
-    "article": {
+    "articles": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::article.article",
       "mappedBy": "category"
     }

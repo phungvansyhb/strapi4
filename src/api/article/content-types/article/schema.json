@@ -4,7 +4,7 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "article",
+    "displayName": "Bài viết",
     "description": ""
   },
   "options": {
@@ -62,9 +62,9 @@
     },
     "category": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "article"
+      "inversedBy": "articles"
     },
     "author": {
       "type": "relation",
