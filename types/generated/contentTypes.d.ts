@@ -468,6 +468,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    viewCount: Attribute.Integer & Attribute.DefaultTo<1>;
   };
 }
 

@@ -9,9 +9,11 @@ module.exports = {
     try {
       // ctx.body = "hello"
       const categories = await strapi.entityService.findMany('api::category.category', {
-        sort: {createdAt: 'DESC'},
+        sort: {createdAt: 'desc'},
         filters : {
-          status : 'published'
+          publishedAt : {
+            $notNull : true
+          }
         },
         populate: {cover: true}
       });
@@ -19,7 +21,9 @@ module.exports = {
         const listArt = await strapi.entityService.findMany('api::article.article', {
           fields: ['id'],
           filters: {
-            status: 'published',
+            publishedAt : {
+              $notNull : true
+            },
             category: category
           },
 

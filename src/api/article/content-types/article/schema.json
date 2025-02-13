@@ -75,6 +75,10 @@
       "type": "integer",
       "min": 2,
       "default": 5
+    },
+    "viewCount": {
+      "type": "integer",
+      "default": 1
     }
   }
 }
