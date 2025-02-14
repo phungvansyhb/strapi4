@@ -8,27 +8,33 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "authorName": {
       "type": "string"
     },
-    "content": {
-      "type": "richtext"
-    },
     "article": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::article.article",
-      "inversedBy": "comment"
+      "inversedBy": "comments"
     },
     "email": {
       "type": "email"
     },
     "phone": {
       "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "app": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::app.app",
+      "inversedBy": "comments"
     }
   }
 }

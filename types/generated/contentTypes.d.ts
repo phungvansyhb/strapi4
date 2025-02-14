@@ -379,6 +379,11 @@ export interface ApiAppApp extends Schema.CollectionType {
       'oneToMany',
       'api::category.category'
     >;
+    comments: Attribute.Relation<
+      'api::app.app',
+      'oneToMany',
+      'api::comment.comment'
+    >;
     content: Attribute.RichText;
     cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
@@ -418,9 +423,9 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'manyToOne',
       'api::category.category'
     >;
-    comment: Attribute.Relation<
+    comments: Attribute.Relation<
       'api::article.article',
-      'oneToOne',
+      'oneToMany',
       'api::comment.comment'
     >;
     content: Attribute.RichText &
@@ -558,16 +563,21 @@ export interface ApiCommentComment extends Schema.CollectionType {
     singularName: 'comment';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
+    app: Attribute.Relation<
+      'api::comment.comment',
+      'manyToOne',
+      'api::app.app'
+    >;
     article: Attribute.Relation<
       'api::comment.comment',
-      'oneToOne',
+      'manyToOne',
       'api::article.article'
     >;
     authorName: Attribute.String;
-    content: Attribute.RichText;
+    content: Attribute.Text;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::comment.comment',
@@ -577,7 +587,6 @@ export interface ApiCommentComment extends Schema.CollectionType {
       Attribute.Private;
     email: Attribute.Email;
     phone: Attribute.String;
-    publishedAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::comment.comment',

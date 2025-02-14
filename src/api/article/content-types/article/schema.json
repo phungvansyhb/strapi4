@@ -54,12 +54,6 @@
       "relation": "oneToMany",
       "target": "api::article.article"
     },
-    "comment": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::comment.comment",
-      "mappedBy": "article"
-    },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
@@ -79,6 +73,12 @@
     "viewCount": {
       "type": "integer",
       "default": 1
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "article"
     }
   }
 }
