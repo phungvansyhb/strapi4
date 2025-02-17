@@ -24,9 +24,6 @@
     "description": {
       "type": "string"
     },
-    "content": {
-      "type": "richtext"
-    },
     "cover": {
       "type": "media",
       "multiple": false,
@@ -57,6 +54,13 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "app"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "default"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

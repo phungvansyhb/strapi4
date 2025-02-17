@@ -384,7 +384,13 @@ export interface ApiAppApp extends Schema.CollectionType {
       'oneToMany',
       'api::comment.comment'
     >;
-    content: Attribute.RichText;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'default';
+        }
+      >;
     cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::app.app', 'oneToOne', 'admin::user'> &
@@ -590,6 +596,37 @@ export interface ApiCommentComment extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSubcriberSubcriber extends Schema.CollectionType {
+  collectionName: 'subcribers';
+  info: {
+    description: '';
+    displayName: 'subcriber';
+    pluralName: 'subcribers';
+    singularName: 'subcriber';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::subcriber.subcriber',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    email: Attribute.Email & Attribute.Required & Attribute.Unique;
+    publishedAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::subcriber.subcriber',
       'oneToOne',
       'admin::user'
     > &
@@ -1125,6 +1162,7 @@ declare module '@strapi/types' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::comment.comment': ApiCommentComment;
+      'api::subcriber.subcriber': ApiSubcriberSubcriber;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

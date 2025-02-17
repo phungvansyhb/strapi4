@@ -1,0 +1,392 @@
+{
+  "version": 2,
+  "data": {
+    "api::comment.comment": {
+      "1": {
+        "id": 1,
+        "authorName": "NoNam",
+        "email": "phungvansyhb@gmail.com",
+        "phone": "0389444315",
+        "createdAt": "2025-02-14T04:12:48.035Z",
+        "updatedAt": "2025-02-14T06:35:57.387Z",
+        "content": "Viết hay quá",
+        "article": 3,
+        "app": null,
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "2": {
+        "id": 2,
+        "authorName": "boy cà khịa",
+        "email": "phungvansyhbfw@lgcns.com",
+        "phone": "0389444315",
+        "createdAt": "2025-02-14T04:14:15.131Z",
+        "updatedAt": "2025-02-14T06:35:41.943Z",
+        "content": "viết dở ẹc",
+        "article": 3,
+        "app": null,
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "3": {
+        "id": 3,
+        "authorName": "sypv",
+        "email": "phungvansyhb@gmail.com",
+        "phone": "01283123",
+        "createdAt": "2025-02-14T06:36:58.826Z",
+        "updatedAt": "2025-02-14T06:36:58.826Z",
+        "content": "test",
+        "article": 2,
+        "app": null,
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "4": {
+        "id": 4,
+        "authorName": "sỹ phùng",
+        "email": "phungvansyhb@gmail.com",
+        "phone": "0389444315",
+        "createdAt": "2025-02-14T06:57:22.613Z",
+        "updatedAt": "2025-02-14T06:57:22.613Z",
+        "content": "test comment",
+        "article": 3,
+        "app": null,
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "5": {
+        "id": 5,
+        "authorName": "sy phùng",
+        "email": "phungvansyhb@gmail.com",
+        "phone": "0389444315",
+        "createdAt": "2025-02-14T06:58:32.470Z",
+        "updatedAt": "2025-02-14T06:58:32.470Z",
+        "content": "ồ waoo",
+        "article": 3,
+        "app": null,
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "6": {
+        "id": 6,
+        "authorName": "thanhtt",
+        "email": "phungsythanh@gmail.com",
+        "phone": "0389444315",
+        "createdAt": "2025-02-14T07:28:56.635Z",
+        "updatedAt": "2025-02-14T07:28:56.635Z",
+        "content": " \"createdAt\": \"2024-03-06T13:42:05.098Z\",\n    \"updatedAt\": \"2024-03-06T14:16:56.883Z\",\n    \"publishedAt\": \"2024-03-06T14:16:56.895Z\",\n    \"locale\": \"en\"",
+        "article": 3,
+        "app": null,
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "7": {
+        "id": 7,
+        "authorName": "Trangmt",
+        "email": "phungsy@gmail.com",
+        "phone": "0389444315",
+        "createdAt": "2025-02-14T07:34:19.257Z",
+        "updatedAt": "2025-02-14T07:34:19.257Z",
+        "content": "Đăng ký nhận bản tin của chúng tôi để nhận các bài viết mới nhất qua email",
+        "article": 3,
+        "app": null,
+        "createdBy": null,
+        "updatedBy": null
+      }
+    },
+    "api::category.category": {
+      "1": {
+        "id": 1,
+        "name": "công nghệ",
+        "slug": "cong-nghe",
+        "type": "article",
+        "createdAt": "2025-02-11T06:43:25.121Z",
+        "updatedAt": "2025-02-12T03:17:34.635Z",
+        "publishedAt": "2025-02-11T06:43:28.426Z",
+        "cover": 3,
+        "app": null,
+        "articles": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "2": {
+        "id": 2,
+        "name": "văn hóa",
+        "slug": "van-hoa",
+        "type": "article",
+        "createdAt": "2025-02-11T06:43:44.380Z",
+        "updatedAt": "2025-02-12T03:17:52.373Z",
+        "publishedAt": "2025-02-11T06:43:45.677Z",
+        "cover": 4,
+        "app": null,
+        "articles": [
+          3,
+          2
+        ],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "3": {
+        "id": 3,
+        "name": "nghệ thuật",
+        "slug": "nghe-thuat",
+        "type": "article",
+        "createdAt": "2025-02-11T06:44:05.649Z",
+        "updatedAt": "2025-02-12T03:17:43.980Z",
+        "publishedAt": "2025-02-11T06:44:06.878Z",
+        "cover": 6,
+        "app": null,
+        "articles": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "4": {
+        "id": 4,
+        "name": "ẩm thực",
+        "slug": "am-thuc",
+        "type": "article",
+        "createdAt": "2025-02-11T06:44:34.569Z",
+        "updatedAt": "2025-02-12T03:17:25.305Z",
+        "publishedAt": "2025-02-11T06:44:35.947Z",
+        "cover": 5,
+        "app": null,
+        "articles": [],
+        "createdBy": null,
+        "updatedBy": null
+      }
+    },
+    "plugin::upload.file": {
+      "1": {
+        "id": 1,
+        "name": "author-at-work.webp",
+        "alternativeText": "Mai Trang author",
+        "caption": "Mai Trang author",
+        "hash": "author_at_work_e6960b53c6",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "url": "/uploads/author_at_work_e6960b53c6.webp",
+        "createdAt": "2025-02-12T03:10:56.576Z",
+        "updatedAt": "2025-02-12T03:10:56.576Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "2": {
+        "id": 2,
+        "name": "menauthor.jpg",
+        "alternativeText": "Phung Van Sy Author",
+        "caption": "Phung Van Sy Author",
+        "hash": "menauthor_2e83e0c4ae",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "url": "/uploads/menauthor_2e83e0c4ae.jpg",
+        "createdAt": "2025-02-12T03:11:29.294Z",
+        "updatedAt": "2025-02-13T07:39:11.562Z",
+        "createdBy": 1,
+        "updatedBy": 1
+      },
+      "3": {
+        "id": 3,
+        "name": "technology.webp",
+        "alternativeText": "techonology",
+        "caption": "techonology",
+        "hash": "technology_dad723103a",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "url": "/uploads/technology_dad723103a.webp",
+        "createdAt": "2025-02-12T03:12:02.945Z",
+        "updatedAt": "2025-02-12T03:12:25.254Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "4": {
+        "id": 4,
+        "name": "cuture.jpg",
+        "alternativeText": "văn hóa",
+        "caption": "văn hóa",
+        "hash": "cuture_d3b49ee183",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "url": "/uploads/cuture_d3b49ee183.jpg",
+        "createdAt": "2025-02-12T03:14:37.381Z",
+        "updatedAt": "2025-02-12T03:15:23.772Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "5": {
+        "id": 5,
+        "name": "cusine.jpeg",
+        "alternativeText": "ẩm thực",
+        "caption": "ẩm thực",
+        "hash": "cusine_d5b2e06761",
+        "ext": ".jpeg",
+        "mime": "image/jpeg",
+        "url": "/uploads/cusine_d5b2e06761.jpeg",
+        "createdAt": "2025-02-12T03:14:37.588Z",
+        "updatedAt": "2025-02-12T03:15:16.746Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "6": {
+        "id": 6,
+        "name": "art.webp",
+        "alternativeText": "nghệ thuật",
+        "caption": "nghệ thuật",
+        "hash": "art_3abe9878d7",
+        "ext": ".webp",
+        "mime": "image/webp",
+        "url": "/uploads/art_3abe9878d7.webp",
+        "createdAt": "2025-02-12T03:14:38.107Z",
+        "updatedAt": "2025-02-12T03:15:07.316Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "7": {
+        "id": 7,
+        "name": "hoivat.jpg",
+        "alternativeText": "hội vật",
+        "caption": "hội vật",
+        "hash": "hoivat_abec5d22ff",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "url": "/uploads/hoivat_abec5d22ff.jpg",
+        "createdAt": "2025-02-12T03:16:29.387Z",
+        "updatedAt": "2025-02-12T03:16:38.909Z",
+        "createdBy": 1,
+        "updatedBy": 1
+      }
+    },
+    "shared.seo": {
+      "2": {
+        "id": 2,
+        "metaTitle": "Rộn ràng Giải Vật truyền thống thôn Quảng Yên Xuân Ất Tỵ",
+        "metaDescription": " ( từ ngày mùng 9 tháng Giêng), thôn Quảng Yên – xã Phượng Sơn đã tổ chức khai mạc Giải Vật truyền thống lễ hội Đình làng xuân Ất Tỵ 2025.",
+        "keywords": "vật truyền thống, lễ hội khai xuân, hôi làng Quảng yên",
+        "metaRobots": "index, follow",
+        "structuredData": null,
+        "metaViewport": "width=device-width, initial-scale=1.0",
+        "canonicalURL": "currentURL",
+        "metaImage": 7,
+        "metaSocial": [
+          2,
+          3
+        ]
+      },
+      "3": {
+        "id": 3,
+        "metaTitle": "Tổng bí thư Tô Lâm tuyên bố sốc",
+        "metaDescription": "Những gì cản trở đất nước phát triển, cái gì là điểm nghẽn thì phải giải quyết, cả xã hội chuyển mình, ai cũng phải nghĩ để thực hiện\"",
+        "keywords": "thời sự, tin quốc hội",
+        "metaRobots": "index, follow",
+        "structuredData": null,
+        "metaViewport": "width=device-width, initial-scale=1.0",
+        "canonicalURL": "currentURL",
+        "metaImage": 2,
+        "metaSocial": [
+          4
+        ]
+      }
+    },
+    "api::app.app": {},
+    "api::author.author": {
+      "1": {
+        "id": 1,
+        "name": "Phùng Văn Sỹ",
+        "email": "phungvansyhb@gmail.com",
+        "createdAt": "2025-02-11T07:00:46.658Z",
+        "updatedAt": "2025-02-12T03:19:21.527Z",
+        "publishedAt": "2025-02-11T07:00:49.597Z",
+        "avatar": 2,
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "2": {
+        "id": 2,
+        "name": "Nguyễn Mai Trang",
+        "email": "maitrang@gmail.com",
+        "createdAt": "2025-02-11T07:00:46.658Z",
+        "updatedAt": "2025-02-12T03:19:13.856Z",
+        "publishedAt": "2025-02-11T07:01:47.474Z",
+        "avatar": 1,
+        "createdBy": null,
+        "updatedBy": null
+      }
+    },
+    "api::article.article": {
+      "2": {
+        "id": 2,
+        "name": "Rộn ràng Giải Vật truyền thống thôn Quảng Yên Xuân Ất Tỵ 1",
+        "content": "<p>&nbsp; Lễ hội Vật truyền thống đình làng thôn Quảng Yên là nét văn hóa phi vật thể của xã Phượng Sơn để gắn kết cộng đồng, tạo dựng không gian văn hoá trang trọng, tưng bừng, náo nhiệt. Lễ hội trở thành nơi Nhân dân trở về cội nguồn dân tộc, tưởng nhớ công ơn những người đi trước, cầu mong những điều tốt lành, bình an đến với mỗi người. Đây là một lễ hội dân gian truyền thống có từ lâu đời. Được diễn ra từ ngày 9 đến ngày 11 tháng Giêng hàng năm, thu hút các cụ bô lão, thanh niên trai tráng và các cháu nhi đồng trong và ngoài địa phương tham gia.</p><h2>Kết bài</h2><p>Sau keo vật thờ, các keo vật của lễ hội chính thức diễn ra. Tại lễ hội Vật truyền thống đình làng Quảng Yên năm nay dự kiến đón hơn 200 đô vật đến từ các câu lạc bộ trong huyện, các huyện bạn và các tỉnh thành như : Bắc Giang, Bắc Ninh, các câu lạc bộ Quân đội, Công an…</p><p>&nbsp; &nbsp; Theo thể thức thi đấu, các đô vật đến đăng ký tham gia Hội vật đều phải thi đấu từ các giải lèo thường, sau khi dành phần thắng mới được vào thi đấu các đầu lèo giải, sau đó tiến hành giữ và phá các đầu lèo. Khi thắng các đầu lèo, đô vật có quyền thi đấu giữ và phá các giải Nhất, Nhì, Ba.</p><p>&nbsp; &nbsp; Kết thúc giải, ban tổ chức sẽ trao giải nhất, nhì, ba dành cho nam, 1 giải dành cho nữ và 2 giải thiếu niên. Trong đó có 1 giải thiếu niên và giải Ba dành riêng cho các đô vận người thôn Quảng Yên. Dự kiến phần thưởng của giải nhất là 20.000.000 đồng.</p><p>&nbsp; &nbsp; Hội vật truyền thống làng Quảng Yên được tổ chức vào dịp đầu Xuân nhằm gìn giữ, phát huy những giá trị văn hóa truyền thống tốt đẹp; đồng thời phát hiện, bồi dưỡng tài năng cho bộ môn vật của huyện. Thông qua lễ hội thể hiện tinh thần thượng võ và là hình thức cổ vũ tinh thần, rèn luyện sức khỏe để xây dựng, bảo vệ quê hương, đất nước.</p>",
+        "description": "Sáng ngày 6/2/2025 ( từ ngày mùng 9 tháng Giêng), thôn Quảng Yên – xã Phượng Sơn đã tổ chức khai mạc Giải Vật truyền thống lễ hội Đình làng xuân Ất Tỵ 2025.",
+        "slug": "ron-rang-giai-vat-truyen-thong-thon-quang-yen-xuan-at-ty",
+        "readingTime": 4,
+        "createdAt": "2025-02-11T06:54:04.021Z",
+        "updatedAt": "2025-02-13T08:18:08.676Z",
+        "publishedAt": "2025-02-11T06:54:35.626Z",
+        "viewCount": 15,
+        "seo": 2,
+        "cover": 7,
+        "related_article": [],
+        "category": 2,
+        "author": 1,
+        "comments": [
+          3
+        ],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "3": {
+        "id": 3,
+        "name": "Tổng Bí thư Tô Lâm: Những gì cản trở đất nước phát triển thì phải giải quyết",
+        "content": "<p>Tiếp tục Kỳ họp bất thường lần thứ 9, sáng 13/2, Quốc hội thảo luận tổ về dự án Luật Tổ chức Chính phủ (sửa đổi), Luật Tổ chức chính quyền địa phương (sửa đổi) và dự thảo Nghị quyết của Quốc hội quy định về xử lý một số vấn đề liên quan đến sắp xếp tổ chức bộ máy nhà nước.</p><p>Tham gia thảo luận, Tổng Bí thư Tô Lâm nêu rõ, công tác sắp xếp tinh gọn bộ máy được nhân dân, các tổ chức, cơ quan đồng tình, ủng hộ, triển khai thực hiện rất nhanh và rất tốt.</p><p>Ông phát biểu: “Đây là chủ trương rất đúng, nhân dân mong đợi từ lâu. Tinh gọn để tiết kiệm tiền là một phần thôi, quan trọng hơn cả là hiệu năng, hiệu lực, hiệu quả của bộ máy, đưa đất nước phát triển, nâng cao đời sống nhân dân mới là điều mong mỏi nhất”.</p><p>Nhấn mạnh muốn phát triển, bứt phá thì phải làm, Tổng Bí thư chỉ rõ các nhiệm vụ rất quan trọng trong nhiều nhiệm vụ phải làm để đạt mục tiêu trên.</p><p>Thứ nhất phải có sự tăng trưởng, từ đó nâng cao đời sống nhân dân, thỏa mãn nhu cầu ngày càng cao của nhân dân trên các mặt. Đây là mục tiêu xuyên suốt. Không thể nói tăng trưởng mấy con số mà đời sống nhân dân không thay đổi, nếu vậy tăng trưởng đi đâu - Tổng Bí thư đặt vấn đề.</p><p>Thứ hai là tinh gọn mô hình tổ chức bộ máy và hoàn thiện hệ thống quy định pháp luật, để huy động sức mạnh toàn xã hội. Cùng với đó là bố trí đội ngũ cán bộ để nâng cao năng lực thực thi pháp luật.</p><p>“Mô hình sắp xếp làm rồi, dân đồng tình rồi, từ Trung ương đến Quốc hội, Chính phủ, cơ sở. Còn làm thế nào thì đang sửa quy định pháp luật. Tiếp đó bố trí cán bộ thực thi nhiệm vụ, hết lòng hết sức phục vụ nhân dân”, theo lời Tổng Bí thư.</p><p>Tổng Bí thư phân tích, Nghị quyết của Trung ương nhiều khóa đã đánh giá bộ máy cồng kềnh, hoạt động kém hiệu lực, hiệu quả. Khóa XIII tiếp tục tiến hành tổng kết, triển khai, bởi bây giờ là thời cơ vàng, chuẩn bị cho Đại hội XIV.</p>",
+        "description": "Những gì cản trở đất nước phát triển, cái gì là điểm nghẽn thì phải giải quyết, cả xã hội chuyển mình, ai cũng phải nghĩ để thực hiện\", Tổng Bí thư Tô Lâm nhấn mạnh tại phiên thảo luận tổ của Quốc hội.",
+        "slug": "tong-bi-thu-to-lam-nhung-gi-can-tro-dat-nuoc-phat-trien-thi-phai-giai-quyet",
+        "readingTime": 3,
+        "createdAt": "2025-02-13T07:14:13.061Z",
+        "updatedAt": "2025-02-14T07:45:16.729Z",
+        "publishedAt": "2025-02-13T07:41:32.353Z",
+        "viewCount": 35,
+        "seo": 3,
+        "cover": 2,
+        "related_article": [
+          2
+        ],
+        "category": 2,
+        "author": 2,
+        "comments": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          2
+        ],
+        "createdBy": null,
+        "updatedBy": null
+      }
+    },
+    "plugin::upload.folder": {},
+    "shared.meta-social": {
+      "2": {
+        "id": 2,
+        "socialNetwork": "Facebook",
+        "title": "Rộn ràng Giải Vật truyền thống thôn Quảng Yên Xuân Ất Tỵ",
+        "description": "Rộn ràng Giải Vật truyền thống thôn Quảng Yên Xuân Ất Tỵ",
+        "image": 7
+      },
+      "3": {
+        "id": 3,
+        "socialNetwork": "Twitter",
+        "title": "Rộn ràng Giải Vật truyền thống thôn Quảng Yên Xuân Ất Tỵ",
+        "description": "Rộn ràng Giải Vật truyền thống thôn Quảng Yên Xuân Ất Tỵ",
+        "image": 7
+      },
+      "4": {
+        "id": 4,
+        "socialNetwork": "Facebook",
+        "title": "Tổng bí thư Tô Lâm tuyên bố sốc",
+        "description": "Những gì cản trở đất nước phát triển, cái gì là điểm nghẽn thì...",
+        "image": 2
+      }
+    }
+  }
+}`
