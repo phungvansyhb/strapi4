@@ -1,6 +1,53 @@
 {
   "version": 2,
   "data": {
+    "api::subcriber.subcriber": {
+      "1": {
+        "id": 1,
+        "email": "phungvansyhb@gmail.com",
+        "createdAt": "2025-02-17T06:54:24.407Z",
+        "updatedAt": "2025-02-17T06:54:24.407Z",
+        "publishedAt": "2025-02-17T06:54:24.399Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "2": {
+        "id": 2,
+        "email": "phungvansyhb1@gmail.com",
+        "createdAt": "2025-02-17T06:55:30.943Z",
+        "updatedAt": "2025-02-17T06:55:30.943Z",
+        "publishedAt": "2025-02-17T06:55:30.941Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "3": {
+        "id": 3,
+        "email": "phungvansyhbfw@lgcns.com",
+        "createdAt": "2025-02-17T08:04:03.321Z",
+        "updatedAt": "2025-02-17T08:04:03.321Z",
+        "publishedAt": "2025-02-17T08:04:03.318Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "4": {
+        "id": 4,
+        "email": "phungsy@gmail.com",
+        "createdAt": "2025-02-17T08:04:17.281Z",
+        "updatedAt": "2025-02-17T08:04:17.281Z",
+        "publishedAt": "2025-02-17T08:04:17.279Z",
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "5": {
+        "id": 5,
+        "email": "minhhoattran@lgcns.com",
+        "createdAt": "2025-02-17T08:06:02.960Z",
+        "updatedAt": "2025-02-17T08:06:02.960Z",
+        "publishedAt": "2025-02-17T08:06:02.952Z",
+        "createdBy": null,
+        "updatedBy": null
+      }
+    },
     "api::comment.comment": {
       "1": {
         "id": 1,
@@ -92,65 +139,136 @@
         "app": null,
         "createdBy": null,
         "updatedBy": null
+      },
+      "8": {
+        "id": 8,
+        "authorName": "boy cà khịa",
+        "email": "phungvansyhb@gmail.com",
+        "phone": "0389444315",
+        "createdAt": "2025-02-18T04:46:44.898Z",
+        "updatedAt": "2025-02-18T04:46:44.898Z",
+        "content": "gì dọ",
+        "article": null,
+        "app": 1,
+        "createdBy": null,
+        "updatedBy": null
       }
     },
     "api::category.category": {
       "1": {
         "id": 1,
-        "name": "công nghệ",
-        "slug": "cong-nghe",
+        "name": "bài viết công nghệ",
+        "slug": "bai-viet-cong-nghe",
         "type": "article",
         "createdAt": "2025-02-11T06:43:25.121Z",
-        "updatedAt": "2025-02-12T03:17:34.635Z",
+        "updatedAt": "2025-02-17T10:11:12.549Z",
         "publishedAt": "2025-02-11T06:43:28.426Z",
         "cover": 3,
-        "app": null,
         "articles": [],
+        "apps": [],
         "createdBy": null,
         "updatedBy": null
       },
       "2": {
         "id": 2,
-        "name": "văn hóa",
-        "slug": "van-hoa",
+        "name": "bài viết văn hóa",
+        "slug": "bai-viet-van-hoa",
         "type": "article",
         "createdAt": "2025-02-11T06:43:44.380Z",
-        "updatedAt": "2025-02-12T03:17:52.373Z",
+        "updatedAt": "2025-02-17T10:11:33.337Z",
         "publishedAt": "2025-02-11T06:43:45.677Z",
         "cover": 4,
-        "app": null,
         "articles": [
           3,
           2
         ],
+        "apps": [],
         "createdBy": null,
         "updatedBy": null
       },
       "3": {
         "id": 3,
-        "name": "nghệ thuật",
-        "slug": "nghe-thuat",
+        "name": "bài viết nghệ thuật",
+        "slug": "bai-viet-nghe-thuat",
         "type": "article",
         "createdAt": "2025-02-11T06:44:05.649Z",
-        "updatedAt": "2025-02-12T03:17:43.980Z",
+        "updatedAt": "2025-02-17T10:11:23.833Z",
         "publishedAt": "2025-02-11T06:44:06.878Z",
         "cover": 6,
-        "app": null,
         "articles": [],
+        "apps": [],
         "createdBy": null,
         "updatedBy": null
       },
       "4": {
         "id": 4,
-        "name": "ẩm thực",
-        "slug": "am-thuc",
+        "name": "bài viết ẩm thực",
+        "slug": "bai-viet-am-thuc",
         "type": "article",
         "createdAt": "2025-02-11T06:44:34.569Z",
-        "updatedAt": "2025-02-12T03:17:25.305Z",
+        "updatedAt": "2025-02-17T10:11:01.384Z",
         "publishedAt": "2025-02-11T06:44:35.947Z",
         "cover": 5,
-        "app": null,
         "articles": [],
+        "apps": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "5": {
+        "id": 5,
+        "name": "ứng dụng học tập",
+        "slug": "ung-dung-hoc-tap",
+        "type": "app",
+        "createdAt": "2025-02-17T10:11:54.615Z",
+        "updatedAt": "2025-02-17T10:12:30.322Z",
+        "publishedAt": "2025-02-17T10:12:30.319Z",
+        "cover": null,
+        "articles": [],
+        "apps": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "6": {
+        "id": 6,
+        "name": "ứng dụng window",
+        "slug": "ung-dung-window",
+        "type": "app",
+        "createdAt": "2025-02-17T10:12:50.225Z",
+        "updatedAt": "2025-02-17T10:12:51.716Z",
+        "publishedAt": "2025-02-17T10:12:51.711Z",
+        "cover": null,
+        "articles": [],
+        "apps": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "7": {
+        "id": 7,
+        "name": "ứng dụng MacOS",
+        "slug": "ung-dung-mac-os",
+        "type": "app",
+        "createdAt": "2025-02-17T10:13:07.977Z",
+        "updatedAt": "2025-02-17T10:13:09.917Z",
+        "publishedAt": "2025-02-17T10:13:09.914Z",
+        "cover": null,
+        "articles": [],
+        "apps": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "8": {
+        "id": 8,
+        "name": "ứng dụng media",
+        "slug": "ung-dung-media",
+        "type": "app",
+        "createdAt": "2025-02-18T03:37:20.402Z",
+        "updatedAt": "2025-02-18T03:37:27.355Z",
+        "publishedAt": "2025-02-18T03:37:27.350Z",
+        "cover": 9,
+        "articles": [],
+        "apps": [
+          1
+        ],
         "createdBy": null,
         "updatedBy": null
       }
@@ -253,6 +371,34 @@
         "updatedAt": "2025-02-12T03:16:38.909Z",
         "createdBy": 1,
         "updatedBy": 1
+      },
+      "8": {
+        "id": 8,
+        "name": "pts2024.jpg",
+        "alternativeText": "photoshop2024",
+        "caption": "photoshop2024",
+        "hash": "pts2024_424c1a4d95",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "url": "/uploads/pts2024_424c1a4d95.jpg",
+        "createdAt": "2025-02-18T02:31:21.851Z",
+        "updatedAt": "2025-02-18T02:31:41.408Z",
+        "createdBy": 1,
+        "updatedBy": 1
+      },
+      "9": {
+        "id": 9,
+        "name": "media.png",
+        "alternativeText": "media",
+        "caption": "media",
+        "hash": "media_1634698918",
+        "ext": ".png",
+        "mime": "image/png",
+        "url": "/uploads/media_1634698918.png",
+        "createdAt": "2025-02-18T03:37:16.345Z",
+        "updatedAt": "2025-02-18T03:37:16.345Z",
+        "createdBy": null,
+        "updatedBy": null
       }
     },
     "shared.seo": {
@@ -284,9 +430,44 @@
         "metaSocial": [
           4
         ]
+      },
+      "6": {
+        "id": 6,
+        "metaTitle": "photoshop cc2024",
+        "metaDescription": "cai dat photoshop cc2024 full crack for window and macOS",
+        "keywords": "pts2024,pts,photoshop",
+        "metaRobots": "index, follow",
+        "structuredData": null,
+        "metaViewport": "width=device-width, initial-scale=1.0",
+        "canonicalURL": "currentURL",
+        "metaImage": 8,
+        "metaSocial": [
+          7
+        ]
       }
     },
-    "api::app.app": {},
+    "api::app.app": {
+      "1": {
+        "id": 1,
+        "name": "photoshop cc2024",
+        "slug": "photoshop-cc2024",
+        "description": "Phần mềm photoshop 2024 crack macOS, window",
+        "src_url": "https://www.google.com/search?q=pts+2024",
+        "createdAt": "2025-02-18T02:34:34.504Z",
+        "updatedAt": "2025-02-18T06:27:27.719Z",
+        "publishedAt": "2025-02-18T02:35:15.587Z",
+        "content": "<p>Chúng ta nên tải Photoshop 2024 từ trang chủ Adobe. Để có tính năng mới nhất, chạy nhanh và không mang Virus vào máy tính. Vậy tải Photoshop 2024 từ trang chủ như thế nào? Bạn hãy tham khảo cách đăng ký tài khoản Adobe qua bài viết này. Sau đó cài ứng dụng Adobe Creative Cloud và đăng nhập bằng tài khoản vừa tạo.</p>",
+        "viewCount": 11,
+        "cover": 8,
+        "category": 8,
+        "seo": 6,
+        "comments": [
+          8
+        ],
+        "createdBy": null,
+        "updatedBy": null
+      }
+    },
     "api::author.author": {
       "1": {
         "id": 1,
@@ -320,9 +501,9 @@
         "slug": "ron-rang-giai-vat-truyen-thong-thon-quang-yen-xuan-at-ty",
         "readingTime": 4,
         "createdAt": "2025-02-11T06:54:04.021Z",
-        "updatedAt": "2025-02-13T08:18:08.676Z",
+        "updatedAt": "2025-02-18T04:02:21.939Z",
         "publishedAt": "2025-02-11T06:54:35.626Z",
-        "viewCount": 15,
+        "viewCount": 16,
         "seo": 2,
         "cover": 7,
         "related_article": [],
@@ -342,9 +523,9 @@
         "slug": "tong-bi-thu-to-lam-nhung-gi-can-tro-dat-nuoc-phat-trien-thi-phai-giai-quyet",
         "readingTime": 3,
         "createdAt": "2025-02-13T07:14:13.061Z",
-        "updatedAt": "2025-02-14T07:45:16.729Z",
+        "updatedAt": "2025-02-18T04:02:21.998Z",
         "publishedAt": "2025-02-13T07:41:32.353Z",
-        "viewCount": 35,
+        "viewCount": 47,
         "seo": 3,
         "cover": 2,
         "related_article": [
@@ -386,7 +567,14 @@
         "title": "Tổng bí thư Tô Lâm tuyên bố sốc",
         "description": "Những gì cản trở đất nước phát triển, cái gì là điểm nghẽn thì...",
         "image": 2
+      },
+      "7": {
+        "id": 7,
+        "socialNetwork": "Facebook",
+        "title": "photoshop cc2024",
+        "description": "cai dat photoshop cc2024",
+        "image": 8
       }
     }
   }
-}`
+}
