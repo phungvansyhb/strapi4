@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * app controller
+ * ung-dung controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;

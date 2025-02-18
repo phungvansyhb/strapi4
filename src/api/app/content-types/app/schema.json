@@ -38,11 +38,11 @@
     "src_url": {
       "type": "string"
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "mappedBy": "app"
+      "inversedBy": "apps"
     },
     "seo": {
       "type": "component",
@@ -61,6 +61,10 @@
         "preset": "default"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "viewCount": {
+      "type": "integer",
+      "default": 0
     }
   }
 }

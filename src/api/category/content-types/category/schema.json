@@ -37,16 +37,16 @@
         "audios"
       ]
     },
-    "app": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::app.app",
-      "inversedBy": "categories"
-    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article",
+      "mappedBy": "category"
+    },
+    "apps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::app.app",
       "mappedBy": "category"
     }
   }

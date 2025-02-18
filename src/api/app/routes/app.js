@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * app router
+ * ung-dung router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;

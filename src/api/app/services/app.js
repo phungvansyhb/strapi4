@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * app service
+ * ung-dung service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;

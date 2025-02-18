@@ -374,9 +374,9 @@ export interface ApiAppApp extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    categories: Attribute.Relation<
+    category: Attribute.Relation<
       'api::app.app',
-      'oneToMany',
+      'manyToOne',
       'api::category.category'
     >;
     comments: Attribute.Relation<
@@ -404,6 +404,7 @@ export interface ApiAppApp extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<'api::app.app', 'oneToOne', 'admin::user'> &
       Attribute.Private;
+    viewCount: Attribute.Integer & Attribute.DefaultTo<0>;
   };
 }
 
@@ -528,9 +529,9 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    app: Attribute.Relation<
+    apps: Attribute.Relation<
       'api::category.category',
-      'manyToOne',
+      'oneToMany',
       'api::app.app'
     >;
     articles: Attribute.Relation<

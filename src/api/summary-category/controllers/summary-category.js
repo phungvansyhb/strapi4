@@ -18,17 +18,30 @@ module.exports = {
         populate: {cover: true}
       });
       for (const category of categories) {
-        const listArt = await strapi.entityService.findMany('api::article.article', {
-          fields: ['id'],
-          filters: {
-            publishedAt : {
-              $notNull : true
+        let listItem = 0
+        if(category.type==='article'){
+          listItem = await strapi.entityService.findMany('api::article.article', {
+            fields: ['id'],
+            filters: {
+              publishedAt : {
+                $notNull : true
+              },
+              category: category
             },
-            category: category
-          },
+          })
+        }else{
+          listItem = await strapi.entityService.findMany('api::app.app', {
+            fields: ['id'],
+            filters: {
+              publishedAt : {
+                $notNull : true
+              },
+              category: category
+            },
+          })
+        }
 
-        })
-        category.numberArticles = listArt.length
+        category.numberArticles = listItem.length
       }
       ctx.body = {data: categories};
       // ctx.body = await strapi.service('api::summary-category.summary-category').getPublishedArticlesSummary();
