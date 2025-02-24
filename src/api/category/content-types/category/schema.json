@@ -23,7 +23,9 @@
       "type": "enumeration",
       "enum": [
         "article",
-        "app"
+        "app",
+        "comic",
+        "course"
       ]
     },
     "cover": {
@@ -47,6 +49,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::app.app",
+      "mappedBy": "category"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course",
       "mappedBy": "category"
     }
   }

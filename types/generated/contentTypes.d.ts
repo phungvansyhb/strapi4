@@ -539,6 +539,11 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'oneToMany',
       'api::article.article'
     >;
+    courses: Attribute.Relation<
+      'api::category.category',
+      'oneToMany',
+      'api::course.course'
+    >;
     cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -550,10 +555,54 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     name: Attribute.String;
     publishedAt: Attribute.DateTime;
     slug: Attribute.UID<'api::category.category', 'name'>;
-    type: Attribute.Enumeration<['article', 'app']>;
+    type: Attribute.Enumeration<['article', 'app', 'comic', 'course']>;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::category.category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiChapterChapter extends Schema.CollectionType {
+  collectionName: 'chapters';
+  info: {
+    displayName: 'chapter';
+    pluralName: 'chapters';
+    singularName: 'chapter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'default';
+        }
+      >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::chapter.chapter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    description: Attribute.String;
+    publishedAt: Attribute.DateTime;
+    seo: Attribute.Component<'shared.seo'>;
+    title: Attribute.String;
+    truyen: Attribute.Relation<
+      'api::chapter.chapter',
+      'oneToOne',
+      'api::commic.commic'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::chapter.chapter',
       'oneToOne',
       'admin::user'
     > &
@@ -585,6 +634,11 @@ export interface ApiCommentComment extends Schema.CollectionType {
     >;
     authorName: Attribute.String;
     content: Attribute.Text;
+    course: Attribute.Relation<
+      'api::comment.comment',
+      'manyToOne',
+      'api::course.course'
+    >;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::comment.comment',
@@ -597,6 +651,102 @@ export interface ApiCommentComment extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::comment.comment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCommicCommic extends Schema.CollectionType {
+  collectionName: 'commics';
+  info: {
+    description: '';
+    displayName: 'Truy\u1EC7n';
+    pluralName: 'commics';
+    singularName: 'commic';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    author: Attribute.String;
+    chapter: Attribute.Relation<
+      'api::commic.commic',
+      'oneToOne',
+      'api::chapter.chapter'
+    >;
+    cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::commic.commic',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    description: Attribute.Text;
+    note: Attribute.Text;
+    publishedAt: Attribute.DateTime;
+    seo: Attribute.Component<'shared.seo'>;
+    slug: Attribute.UID<'api::commic.commic', 'title'>;
+    title: Attribute.String;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::commic.commic',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCourseCourse extends Schema.CollectionType {
+  collectionName: 'courses';
+  info: {
+    description: '';
+    displayName: 'Course';
+    pluralName: 'courses';
+    singularName: 'course';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    author: Attribute.String;
+    category: Attribute.Relation<
+      'api::course.course',
+      'manyToOne',
+      'api::category.category'
+    >;
+    comments: Attribute.Relation<
+      'api::course.course',
+      'oneToMany',
+      'api::comment.comment'
+    >;
+    cover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::course.course',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    description: Attribute.Text;
+    name: Attribute.String;
+    outline: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'default';
+        }
+      >;
+    publishedAt: Attribute.DateTime;
+    seo: Attribute.Component<'shared.seo'>;
+    slug: Attribute.UID<'api::course.course', 'name'>;
+    srcUrl: Attribute.String;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::course.course',
       'oneToOne',
       'admin::user'
     > &
@@ -1162,7 +1312,10 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
+      'api::chapter.chapter': ApiChapterChapter;
       'api::comment.comment': ApiCommentComment;
+      'api::commic.commic': ApiCommicCommic;
+      'api::course.course': ApiCourseCourse;
       'api::subcriber.subcriber': ApiSubcriberSubcriber;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

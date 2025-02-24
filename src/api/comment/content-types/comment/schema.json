@@ -35,6 +35,12 @@
       "relation": "manyToOne",
       "target": "api::app.app",
       "inversedBy": "comments"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "comments"
     }
   }
 }
