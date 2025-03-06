@@ -504,6 +504,7 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    description: Attribute.Text;
     email: Attribute.String;
     name: Attribute.String;
     publishedAt: Attribute.DateTime;
