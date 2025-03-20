@@ -3,6 +3,7 @@ import type { Attribute, Schema } from '@strapi/strapi';
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
+    description: '';
     displayName: 'metaSocial';
     icon: 'project-diagram';
   };
@@ -10,7 +11,7 @@ export interface SharedMetaSocial extends Schema.Component {
     description: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
-        maxLength: 65;
+        maxLength: 125;
       }>;
     image: Attribute.Media<'images' | 'files' | 'videos'>;
     socialNetwork: Attribute.Enumeration<['Facebook', 'Twitter']> &
@@ -18,7 +19,7 @@ export interface SharedMetaSocial extends Schema.Component {
     title: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
-        maxLength: 60;
+        maxLength: 125;
       }>;
   };
 }
@@ -45,7 +46,7 @@ export interface SharedSeo extends Schema.Component {
     metaTitle: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
-        maxLength: 60;
+        maxLength: 125;
       }>;
     metaViewport: Attribute.String &
       Attribute.DefaultTo<'width=device-width, initial-scale=1.0'>;
